@@ -354,7 +354,7 @@ def get_matches():
 
     for match in matchdays:
         matchDetails = match.find_all("div", {"class": "upcomingMatch"})
-        date = match.find({"span": {"class": "matchDayHeadline"}}).text.split()[-1]
+        date = match.find({"div": {"class": "matchDayHeadline"}}).text.split()[-1]
         for getMatch in matchDetails:
             matchObj = {}
 
@@ -763,11 +763,11 @@ if __name__ == "__main__":
     # pp.pprint('get_team_info')
     # pp.pprint(get_team_info('6665'))
 
-    # pp.pprint('get_matches')
-    # pp.pprint(get_matches())
+    pp.pprint("get_matches")
+    pp.pprint(get_matches())
 
-    pp.pprint("get_results")
-    pp.pprint(get_results())
+    # pp.pprint("get_results")
+    # pp.pprint(get_results())
 
     pp.pprint("get_results_by_date")
     today_iso = datetime.datetime.today().isoformat().split("T")[0]
