@@ -79,7 +79,6 @@ def top5teams():
         teams.append(team)
     return teams
 
-
 def top30teams():
     page = get_parsed_page("https://www.hltv.org/ranking/teams/")
     teams = page.find("div", {"class": "ranking"})
